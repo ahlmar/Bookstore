@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Päivitä kirjan tiedot</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+	<h1>Update book information</h1>
+	<div>
+	
+		<form th:object="${book}" th:action="@{/save}" action="#" method="post">
+		<input type="hidden" id="id" th:field="*{id}"/>
+		<label for="title">Book Title</label> <input type="text" id="title" th:field="${book.title}" />
+		<div style="clear: both; display: block; height: 10px;"></div>	
+		<label for="title">Author</label> <input type="text" id="author" th:field="${book.author}" />
+		<div style="clear: both; display: block; height: 10px;"></div>	
+		<label for="title">ISBN</label> <input type="text" id="isbn" th:field="${book.isbn}" />
+		<div style="clear: both; display: block; height: 10px;"></div>	
+		<label for="title">Year</label> <input type="number" id="year" th:field="${book.year}" />
+		<div style="clear: both; display: block; height: 10px;"></div>	
+		<label for="title">Price</label> <input type="number" step="0.01" id="title" th:field="${book.price}" />
+		<div style="clear: both; display: block; height: 10px;"></div>	
+		<input type="submit" value="Update"></input>
+		
+		
+		</form>
+		
+	</div>
+
+
+
+</body>
